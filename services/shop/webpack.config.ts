@@ -13,14 +13,14 @@ interface EnvVariables {
 export default (env: EnvVariables) => {
   const paths: BuildPaths = {
     output: path.resolve(__dirname, "build"),
-    entry: path.resolve(__dirname, "src", "index.tsx"),
+    entry: path.resolve(__dirname, "src", "index.ts"),
     html: path.resolve(__dirname, "public", "index.html"),
     public: path.resolve(__dirname, "public"),
     src: path.resolve(__dirname, "src"),
   };
 
   const config: webpack.Configuration = buildWebpack({
-    port: env.port ?? 3000,
+    port: env.port ?? 3001,
     mode: env.mode ?? "development",
     paths,
     analyzer: env.analyzer,

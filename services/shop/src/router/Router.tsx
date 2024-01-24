@@ -5,14 +5,22 @@ import { Shop } from "@/pages/shop";
 
 const routes = [
   {
-    path: "/",
+    path: "/shop",
     element: <App />,
     children: [
       {
-        path: "/shop",
+        path: "/shop/main",
         element: (
           <Suspense fallback='Loading...'>
             <Shop />
+          </Suspense>
+        ),
+      },
+      {
+        path: "/shop/second",
+        element: (
+          <Suspense fallback='Loading...'>
+            <div style={{ color: "pink" }}>Second</div>
           </Suspense>
         ),
       },

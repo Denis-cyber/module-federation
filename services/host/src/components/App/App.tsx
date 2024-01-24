@@ -6,7 +6,7 @@ export const App = () => (
 
     <Link to={"/about"}>About</Link>
     <br />
-    <Link to={"/shop"}>Shop</Link>
+    <Link to={"/shop/main"}>Shop</Link>
     <Outlet />
   </div>
 );
