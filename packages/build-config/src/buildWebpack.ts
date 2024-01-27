@@ -17,6 +17,9 @@ export function buildWebpack(options: BuildOptions): webpack.Configuration {
       filename: "[name].[contenthash].js",
       clean: true,
     },
+    optimization: {
+      splitChunks: false,
+    },
     plugins: buildPlugins(options),
     module: {
       rules: buildLoaders(options),
